@@ -1,0 +1,29 @@
+
+<div style="background-color:#00A875;height: 800px;">
+  <div class="form_container">
+    <form  class="example-form" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+      <header class="head">LOGIN</header>
+
+      <mat-form-field class="example-full-width">
+        <mat-placeholder class="placeholder">Username</mat-placeholder>
+        <input  matInput type="text"   name="uname" formControlName="uname" />
+      </mat-form-field>
+
+
+
+      <mat-form-field class="example-full-width" >
+
+        <mat-placeholder class="placeholder">Password</mat-placeholder>
+
+        <input  matInput type="password"  name="passwd" formControlName="passwd" />
+      </mat-form-field>
+
+      <div class="mat">  
+            <button   mat-stroked-button color="warn" value="Login">Login</button>
+            
+      </div>
+    </form>
+  </div>
+</div>
+
+

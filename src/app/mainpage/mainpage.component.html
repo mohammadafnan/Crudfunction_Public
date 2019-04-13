@@ -1,0 +1,74 @@
+<!-- <p>
+  mainpage works!
+</p> -->
+<div style="background-color:#00A875;height: 800px;">
+
+<div class="form_container">
+  <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+     <header class="head">ADD CUSTOMER DETAIL</header>
+     <!-- <label>FirstName <span>*</span></label> -->
+
+     <mat-form-field class="example-full-width">
+      <mat-placeholder class="placeholder">FirstName</mat-placeholder>
+
+     <input matInput type="text" name="fname" formControlName="fname"/>
+   </mat-form-field>
+
+     <!-- <label>LastName <span>*</span></label> -->
+     <mat-form-field class="example-full-width">
+      <mat-placeholder class="placeholder">LastName</mat-placeholder>
+
+     <input  matInput type="text" name="lname" formControlName="lname"/>
+   </mat-form-field>
+
+     <!-- <label>Address <span></span></label> -->
+     <mat-form-field class="example-full-width">
+      <mat-placeholder class="placeholder">Address</mat-placeholder>
+
+     <input matInput type="text" name="Email" formControlName="Email"/>
+   </mat-form-field>
+
+     <!-- <label>Email <span></span></label> -->
+     <mat-form-field class="example-full-width">
+      <mat-placeholder class="placeholder">Email</mat-placeholder>
+
+     <input  matInput type="text" name="address" formControlName="address"/>
+   </mat-form-field>
+
+     <!-- <label>Phone No <span></span></label> -->
+     <mat-form-field class="example-full-width">
+      <mat-placeholder class="placeholder">Phone No</mat-placeholder>
+
+     <input matInput type="text" name="phoneno" formControlName="phoneno"/>
+   </mat-form-field>
+
+   <div class="mat">  
+
+
+     <button  mat-stroked-button color="warn"
+      [disabled]="!formdata.valid" value="Submit">Submit</button>
+   </div>
+
+  </form>
+
+</div>
+<br/>
+
+
+<div id="custtable" style="display:none;margin:5; text-align:center;">
+  <table  >
+     <tr>
+        <td>FirstName</td>
+        <td>LastName</td>
+        <td>Address</td>
+        <td>Email</td>
+        <td>Phone No</td>
+     </tr>
+     <tr>
+        <td *ngFor="let data of customerdata">
+           <h5>{{data}}</h5>
+        </td>
+     </tr>
+  </table>
+</div>
+</div>
